@@ -18,3 +18,13 @@ Route::inertia('/', 'Home', [
     'laravelVersion' => \Illuminate\Foundation\Application::VERSION,
     'phpVersion' => PHP_VERSION,
 ])->name('home');
+
+Route::inertia('/page/1', 'Page1', [
+    'title' => 'Page 1',
+    'data' => fn () => Str::random(),
+]);
+
+Route::inertia('/page/2', 'Page2', [
+    'title' => 'Page 2',
+    'data' => fn () => Str::random(),
+]);
